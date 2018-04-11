@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="785.0" prefWidth="1183.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.melo00.Adventura.main.HomeController">
+   <children>
+      <TextField fx:id="vstupniText" layoutX="424.0" layoutY="746.0" onAction="#odesliPrikaz" prefHeight="25.0" prefWidth="273.0" />
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1183.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Soubor">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#novaHra" text="Nová hra" />
+                  <MenuItem mnemonicParsing="false" onAction="#konecHry" text="Konec Hry" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#Napoveda" text="Nápověda" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ListView fx:id="seznamVeciBatoh" layoutX="950.0" layoutY="82.0" onMouseClicked="#klikBatoh" prefHeight="300.0" prefWidth="200.0" />
+      <ListView fx:id="seznamVychodu" layoutX="710.0" layoutY="80.0" onMouseClicked="#klikMistnost" prefHeight="300.0" prefWidth="200.0" />
+      <ListView fx:id="seznamVeciMistnost" layoutX="468.0" layoutY="80.0" onMouseClicked="#klikVecMistnost" prefHeight="300.0" prefWidth="200.0" />
+      <Label layoutX="1012.0" layoutY="48.0" text="Obsah batohu" />
+      <Label layoutX="787.0" layoutY="48.0" text="Východy" />
+      <Label layoutX="527.0" layoutY="48.0" text="Věci v místnosti" />
+      <ImageView fitHeight="390.0" fitWidth="618.0" layoutX="544.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@herniPlan.png" />
+         </image>
+      </ImageView>
+      <TextArea fx:id="vystup" layoutX="24.0" layoutY="79.0" prefHeight="639.0" prefWidth="399.0" wrapText="true" />
+      <ImageView fx:id="uzivatel" fitHeight="42.0" fitWidth="46.0" layoutX="610.0" layoutY="422.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@harry.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="528.0" layoutY="726.0" text="Zadej příkaz" />
+   </children>
+</AnchorPane>
